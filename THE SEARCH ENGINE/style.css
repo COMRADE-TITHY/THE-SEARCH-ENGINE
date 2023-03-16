@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #0b0130;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(#27ff08, #00fccd);
+    border-radius: 50%;
+    transform: translate(-440px, -160px);
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(#fcd200, #fc002e);
+    border-radius: 50%;
+    transform: translate(440px, 160px);
+}
+
+
+
+section .main {
+    position: relative;
+}
+
+section .main .container {
+    width: 60rem;
+    height: 30rem;
+    margin: 0 2rem;
+    display: flex;
+    position: relative;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+section .main .container h1 {
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: 'Lobster', cursive;
+}
+
+section .main .container h1::before {
+    content: '';
+    position: absolute;
+    left: 20.5rem;
+    top: 11.5rem;
+    width: 12rem;
+    height: 4px;
+    background: #ffffff;
+}
+
+
+section .main .container .searchBox {
+    position: relative;
+    width: 80%;
+    margin-top: 2rem;
+}
+
+section .main .container .searchBox .query {
+    width: 100%;
+    padding: 1.3rem 3.3rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    color: aliceblue;
+    outline: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+section .main .container .searchBox .icons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    align-items: center;
+    pointer-events: none;
+
+}
+
+section .main .container .searchBox .icons img {
+    max-width: 100%;
+    height: 30px;
+}
+
+.searchButton {
+    margin: 20px 5px 0;
+    padding: 12px 20px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+    border: 2px solid white;
+    outline: none;
+
+}
+
+.searchButton:hover {
+    background: #ffffff;
+    color: black;
+}
+
+.speakButton {
+    margin: 20px 5px 0;
+    padding: 12px 20px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+    border: 2px solid white;
+    outline: none;
+
+}
+
+.speakButton:hover {
+    background: #ffffff;
+    color: black;
+}
+
+section .main .square {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    animation: animate 7s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: translateY(-40px);
+    }
+
+    50% {
+        transform: translateY(40px);
+    }
+}
+
+section .main .square:nth-child(1) {
+    top: -50px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+}
+
+section .main .square:nth-child(2) {
+    top: 150px;
+    left: -60px;
+    width: 120px;
+    height: 120px;
+    z-index: 2000;
+}
+
+section .main .square:nth-child(3) {
+    bottom: 50px;
+    right: -30px;
+    width: 80px;
+    height: 80px;
+    z-index: 2000;
+}
+
+section .main .square:nth-child(4) {
+    bottom: -70px;
+    left: 400px;
+    width: 50px;
+    height: 50px;
+}
+
+section .main .square:nth-child(5) {
+    top: -70px;
+    left: 500px;
+    width: 60px;
+    height: 60px;
+    z-index: 2000;
+}
+
+section .main .square:nth-child(6) {
+    bottom: -80px;
+    left: 700px;
+    width: 70px;
+    height: 70px;
+    z-index: 2000;
+}
+
+
+@media (max-width:1180px) {
+    
+
+    section .main .container {
+        width: 56rem;
+    }
+
+    section .main .container .image {
+        font-size: 1.9rem;
+    }
+
+    section::before {
+        transform: translate(-400px, -160px);
+    }
+
+    section::after {
+        transform: translate(400px, 160px);
+    }
+}
+
+@media (max-width:1090px) {
+
+    section .main .container {
+        width: 45rem;
+    }
+
+    section::before {
+        transform: translate(-340px, -140px);
+    }
+
+    section::after {
+        transform: translate(340px, 140px);
+    }
+
+    section .main .square:nth-child(4) {
+        bottom: -70px;
+        left: 200px;
+        width: 50px;
+        height: 50px;
+    }
+
+    section .main .square:nth-child(6) {
+        bottom: -80px;
+        left: 500px;
+        width: 70px;
+        height: 70px;
+        z-index: 2000;
+    }
+}
+
+@media (max-width:980px) {
+
+    section::before {
+        width: 250px;
+        height: 250px;
+        transform: translate(-340px, -160px);
+    }
+
+    section::after {
+        width: 250px;
+        height: 250px;
+        transform: translate(340px, 160px);
+    }
+}
+
+@media (max-width:930px) {
+
+    section .main .container {
+        width: 30rem;
+    }
+
+    section .main .container h1 {
+        font-size: 1.7rem;
+    }
+
+    section .main .container h1::before {
+        left: 11.5rem;
+        top: 11.5rem;
+        width: 11rem;
+    }
+
+    section::before {
+        width: 220px;
+        height: 220px;
+        transform: translate(-230px, -200px);
+    }
+
+    section::after {
+        width: 220px;
+        height: 220px;
+        transform: translate(230px, 200px);
+    }
+
+    section .main .square:nth-child(1) {
+        top: -50px;
+        right: -20px;
+        width: 90px;
+        height: 90px;
+    }
+
+    section .main .square:nth-child(2) {
+        top: 150px;
+        left: -50px;
+        width: 100px;
+        height: 100px;
+        z-index: 2000;
+    }
+
+    section .main .square:nth-child(3) {
+        bottom: 50px;
+        right: -30px;
+        width: 80px;
+        height: 80px;
+        z-index: 2000;
+    }
+
+    section .main .square:nth-child(4) {
+        bottom: -70px;
+        left: 200px;
+        width: 50px;
+        height: 50px;
+    }
+
+    section .main .square:nth-child(5) {
+        top: -70px;
+        left: 260px;
+        width: 60px;
+        height: 60px;
+        z-index: 2000;
+    }
+
+    section .main .square:nth-child(6) {
+        bottom: -80px;
+        left: 700px;
+        width: 70px;
+        height: 70px;
+        z-index: 2000;
+    }
+
+}
+
+@media (max-width:680px) {
+
+    section .main .container {
+        width: 20rem;
+    }
+
+    section .main .container h1 {
+        font-size: 0.9rem;
+        margin-top: -7rem;
+    }
+    section .main .container h1::before {
+        left: 5.8rem;
+        top: 9.3rem;
+        width: 5rem;
+      }
+
+    section .main .container .searchBox {
+        margin-top: -1rem;
+    }
+
+    section::before {
+        width: 120px;
+        height: 120px;
+        transform: translate(-150px, -220px);
+    }
+
+    section::after {
+        width: 120px;
+        height: 120px;
+        transform: translate(150px, 220px);
+    }
+
+    section .main .square:nth-child(1) {
+        top: -50px;
+        right: 0px;
+        width: 60px;
+        height: 60px;
+    }
+
+    section .main .square:nth-child(2) {
+        top: 150px;
+        left: -10px;
+        width: 60px;
+        height: 60px;
+        z-index: 2000;
+    }
+
+    section .main .square:nth-child(3) {
+        bottom: 100px;
+        right: -17px;
+        width: 60px;
+        height: 60px;
+        z-index: 2000;
+    }
+
+    section .main .square:nth-child(4) {
+        bottom: -70px;
+        left: 110px;
+        width: 50px;
+        height: 50px;
+    }
+
+    section .main .square:nth-child(5) {
+        top: -70px;
+        left: 100px;
+        width: 50px;
+        height: 50px;
+        z-index: 2000;
+    }
+
+    section .main .square:nth-child(6) {
+        bottom: -80px;
+        left: 700px;
+        width: 70px;
+        height: 70px;
+        z-index: 2000;
+    }
+}
+
+@media (max-width:390px) {
+    section .main .container h1::before {
+        left: 7.6rem;
+        top: 4.1rem;
+        width: 5rem;
+      }
+    section .main .container {
+        width: 17rem;
+        height: 20rem;
+    }
+
+    section::before {
+        width: 90px;
+        height: 90px;
+        transform: translate(-115px, -140px);
+    }
+
+    section::after {
+        width: 90px;
+        height: 90px;
+        transform: translate(115px, 140px);
+    }
+
+}

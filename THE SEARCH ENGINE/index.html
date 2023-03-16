@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Search Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="main">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="square" style="--i:5;"></div>
+
+            <div class="container">
+                    <h1>The Search Engine</h1>
+                <div class="searchBox">
+                    <input type="text" name="" class="query" id="query" value="">
+                    <div class="icons">
+                        <div><img src="search.png" alt=""></div>
+                        <div><img src="mic.png"></div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="searchButton">Search</button>
+                    <button onclick="voice()" class="speakButton">Click To Speak</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let query = document.querySelector('.query');
+        let searchButton = document.querySelector('.searchButton');
+
+        searchButton.onclick = function () {
+            let url = 'https://www.google.com/search?q=' + query.value;
+            window.open(url, '_self');
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
